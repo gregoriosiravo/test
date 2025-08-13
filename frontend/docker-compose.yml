@@ -1,0 +1,22 @@
+services:
+  nuxt:
+    image: node:18-alpine
+    working_dir: /src
+    volumes:
+      - ./:/src
+      - /node_modules
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm run dev"
+    networks:
+      - test-network
+    environment:
+      - HOST=0.0.0.0
+      - PORT=3000
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+networks:
+  test-network:
+    external: true

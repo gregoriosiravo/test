@@ -1,0 +1,280 @@
+{
+  "uuid": "3b6e6ddc-8cc6-43ca-990c-7e322afbe329",
+  "lastMigration": 33,
+  "name": "Be mock",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "881f6e89-79f0-4eaa-95a3-79879de00057",
+      "documentation": "Get all orders",
+      "method": "get",
+      "endpoint": "api/orders",
+      "responses": [
+        {
+          "uuid": "6ee1da0e-98ad-425a-bfef-55dd0e1d97de",
+          "statusCode": 200,
+          "label": "List of orders",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Content-Type"
+            }
+          ],
+          "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Order Alpha\",\n    \"description\": \"First order from client A\",\n    \"date\": \"2025-08-01\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Order Beta\",\n    \"description\": \"Urgent order from client B\",\n    \"date\": \"2025-08-05\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Order Gamma\",\n    \"description\": \"Monthly supply for client C\",\n    \"date\": \"2025-08-09\"\n  },\n  {\n    \"id\": 4,\n    \"name\": \"Order Delta\",\n    \"description\": \"Replacement items for client D\",\n    \"date\": \"2025-08-10\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Order Epsilon\",\n    \"description\": \"Custom order for VIP client E\",\n    \"date\": \"2025-08-11\"\n  }\n]",
+          "latency": 600,
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "type": "http",
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "10112409-5c55-4a72-9d2b-716395d3a7fb",
+      "documentation": "Get single order with products",
+      "method": "get",
+      "endpoint": "api/orders/:id",
+      "responses": [
+        {
+          "uuid": "e36cfddd-2f34-4715-a65c-08d09b7f9791",
+          "statusCode": 200,
+          "label": "Order with products",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Content-Type"
+            }
+          ],
+          "body": "{\n  \"id\": 1,\n  \"name\": \"Order Alpha\",\n  \"description\": \"First order from client A\",\n  \"date\": \"2025-08-01\",\n  \"products\": [\n    { \"id\": 101, \"name\": \"Product A1\", \"price\": 15.5 },\n    { \"id\": 102, \"name\": \"Product A2\", \"price\": 9.99 },\n    { \"id\": 103, \"name\": \"Product A3\", \"price\": 42.0 }\n  ]\n}\n",
+          "latency": 0,
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "type": "http",
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "926d3a73-8ea5-4c41-a728-5333468d658f",
+      "documentation": "Create a new order",
+      "method": "post",
+      "endpoint": "api/orders",
+      "responses": [
+        {
+          "uuid": "e985b80f-5716-4154-a725-643a490fcb7b",
+          "statusCode": 201,
+          "label": "Order created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "latency": 0,
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "type": "http",
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "7aeb7c93-a48c-44d6-a33c-aab172529ded",
+      "documentation": "Update an order",
+      "method": "put",
+      "endpoint": "api/update-order/:id",
+      "responses": [
+        {
+          "uuid": "cdeb0c76-7664-4565-a48b-c1084ab3d770",
+          "statusCode": 200,
+          "label": "Order updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Content-Type"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS"
+            }
+          ],
+          "body": "{ \"message\": \"Order updated successfully\"}",
+          "latency": 0,
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "type": "http",
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "a3f4cb96-4ed9-4f75-b7c5-b82b774f807f",
+      "documentation": "delete order",
+      "method": "post",
+      "endpoint": "api/orders/:id",
+      "responses": [
+        {
+          "uuid": "d7df4f08-2f2f-41fc-b264-3c4384370afe",
+          "statusCode": 200,
+          "label": "delete order",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Content-Type"
+            }
+          ],
+          "body": "{\n  \"message\": \"Order Deleted successfully\"\n}",
+          "latency": 600,
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "type": "http",
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "881f6e89-79f0-4eaa-95a3-79879de00057"
+    },
+    {
+      "type": "route",
+      "uuid": "10112409-5c55-4a72-9d2b-716395d3a7fb"
+    },
+    {
+      "type": "route",
+      "uuid": "926d3a73-8ea5-4c41-a728-5333468d658f"
+    },
+    {
+      "type": "route",
+      "uuid": "7aeb7c93-a48c-44d6-a33c-aab172529ded"
+    },
+    {
+      "type": "route",
+      "uuid": "a3f4cb96-4ed9-4f75-b7c5-b82b774f807f"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [],
+  "proxyReqHeaders": [],
+  "proxyResHeaders": [],
+  "data": [],
+  "callbacks": []
+}
