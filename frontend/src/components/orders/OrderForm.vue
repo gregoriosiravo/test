@@ -83,11 +83,13 @@ const onSubmit = () => {
 
     <div class="mb-3">
       <label for="name" class="form-label fw-semibold">Name</label>
+      <span class="text-danger" v-if="!form.name.trim()">Name is required</span>
       <input id="name" v-model="form.name" type="text" class="form-control" placeholder="Nome ordine" required />
     </div>
 
     <div class="mb-3">
       <label for="description" class="form-label fw-semibold">Description</label>
+      <span class="text-danger" v-if="!form.description.trim()">Description is required</span>
       <textarea id="description" v-model="form.description" class="form-control" placeholder="Descrizione ordine"
         rows="3"></textarea>
     </div>
@@ -119,7 +121,7 @@ const onSubmit = () => {
 
           <div class="d-flex align-items-center gap-2">
             <span>{{ p.name }} - €{{ p.price }}</span>
-            <input type="number" v-model.number="form.products[index].quantity" min="1"
+            <input id="quantity" type="number" v-model.number="form.products[index].quantity" min="1"
               class="form-control form-control-sm mx-2" style="width: 50px;" />
           </div>
 

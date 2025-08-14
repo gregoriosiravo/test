@@ -9,6 +9,7 @@ const searchTerm = ref('');
 const filterDate = ref('');
 
 const filteredOrders = computed<Order[]>(() => {
+  console.log("Filtering orders:", ordersStore.orders);
   return ordersStore.orders.filter(order => {
     const matchSearch =
       order.name.toLowerCase().includes(searchTerm.value.toLowerCase()) ||
@@ -22,33 +23,36 @@ const filteredOrders = computed<Order[]>(() => {
 });
 
 onMounted(() => {
-  ordersStore.fetchOrders();
-  
+  console.log("Mounted — orders at start:", ordersStore.orders);
+  if (!ordersStore.orders.length) {
+    console.log("Calling fetchOrders...");
+    ordersStore.fetchOrders();
+  }
 });
 </script>
 
 <template>
   <div class="p-4 text-center">
-    <h1 class="mb-4 fw-bold">Lista Ordini</h1>
+    <h1 class="mb-4 fw-bold">Order List</h1>
 
     <div class="d-flex gap-3 mb-4 justify-content-center">
       <input v-model="searchTerm" type="text" placeholder="Cerca per nome o descrizione" class="form-control w-50" />
       <input v-model="filterDate" type="date" class="form-control" style="max-width: 200px;" />
     </div>
 
-    <div v-if="ordersStore.loading" class="text-center">Caricamento ordini...</div>
+    <div v-if="ordersStore.loading" class="text-center">Loading orders...</div>
     <div v-else-if="ordersStore.error" class="text-danger">
       Errore: {{ ordersStore.error }}
     </div>
 
     <ul v-else class="list-unstyled p-0 text-start">
       <li v-for="order in filteredOrders" :key="order.id"
-        class="d-flex justify-content-between align-items-center border-bottom py-2">
+        class="d-flex justify-content-between align-items-center border-bottom py-2 order-item">
         <div>
           <div class="fw-semibold">{{ order.name }}</div>
           <div class="text-muted small">{{ order.description }}</div>
           <div class="text-muted fst-italic small">
-            Data: {{ order.date}}
+            Data: {{ order.date }}
           </div>
         </div>
         <div class="d-flex gap-2">

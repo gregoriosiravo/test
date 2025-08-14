@@ -6,7 +6,7 @@ export const useOrdersStore = defineStore("orders", {
     orders: [] as Order[],
     selectedOrder: null as Order | null,
     loading: false,
-    error: undefined as string | undefined,
+    error: null as string | null,
   }),
   getters: {
     getOrders: (state) => state.orders,
