@@ -56,7 +56,7 @@ const onSubmit = (updatedOrder: Order) => {
                     <template #default="{ item }">
                         <div class="d-flex justify-content-between align-items-center">
                             <span>{{ item.name }}</span>
-                            <span class="badge bg-primary rounded-pill">{{ item.price }}€</span>
+                            <span class="badge bg-primary rounded-pill">{{ item.price*item.quantity }}€</span>
                         </div>
                     </template>
                 </ProductList>

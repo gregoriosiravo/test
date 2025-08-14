@@ -120,7 +120,7 @@ const onSubmit = () => {
           class="list-group-item d-flex justify-content-between align-items-center">
 
           <div class="d-flex align-items-center gap-2">
-            <span>{{ p.name }} - €{{ p.price }}</span>
+            <span>{{ p.name }} - €{{ p.price*p.quantity }}</span>
             <input id="quantity" type="number" v-model.number="form.products[index].quantity" min="1"
               class="form-control form-control-sm mx-2" style="width: 50px;" />
           </div>

@@ -42,7 +42,7 @@ onMounted(() => {
 
     <div v-if="ordersStore.loading" class="text-center">Loading orders...</div>
     <div v-else-if="ordersStore.error" class="text-danger">
-      Errore: {{ ordersStore.error }}
+      Error: {{ ordersStore.error }}
     </div>
 
     <ul v-else class="list-unstyled p-0 text-start">
@@ -52,15 +52,15 @@ onMounted(() => {
           <div class="fw-semibold">{{ order.name }}</div>
           <div class="text-muted small">{{ order.description }}</div>
           <div class="text-muted fst-italic small">
-            Data: {{ order.date }}
+            Date: {{ order.date }}
           </div>
         </div>
         <div class="d-flex gap-2">
           <button class="btn btn-primary btn-sm" @click="$emit('orderDetail', order)">
-            Vedi
+            Check
           </button>
           <button class="btn btn-danger btn-sm" @click="ordersStore.deleteOrder(order.id)">
-            Elimina
+            Delete
           </button>
         </div>
       </li>

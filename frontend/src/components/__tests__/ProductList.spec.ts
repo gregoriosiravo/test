@@ -66,6 +66,6 @@ describe("Products Store", () => {
 
     expect(fetchSpy).toHaveBeenCalledWith("http://localhost:8000/api/products");
 
-    fetchSpy.mockRestore(); // clean up
+    fetchSpy.mockRestore();
   });
 });

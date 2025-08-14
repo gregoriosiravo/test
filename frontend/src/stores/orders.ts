@@ -49,8 +49,8 @@ export const useOrdersStore = defineStore("orders", {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
-              Accept: "application/json", // Add this
-              "X-Requested-With": "XMLHttpRequest", // Add this
+              Accept: "application/json", 
+              "X-Requested-With": "XMLHttpRequest", 
             },
             body: JSON.stringify(order),
           }

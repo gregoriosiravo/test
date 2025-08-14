@@ -1,280 +1,292 @@
 {
-  "uuid": "3b6e6ddc-8cc6-43ca-990c-7e322afbe329",
-  "lastMigration": 33,
-  "name": "Be mock",
-  "endpointPrefix": "",
-  "latency": 0,
-  "port": 3000,
-  "hostname": "",
-  "folders": [],
-  "routes": [
-    {
-      "uuid": "881f6e89-79f0-4eaa-95a3-79879de00057",
-      "documentation": "Get all orders",
-      "method": "get",
-      "endpoint": "api/orders",
-      "responses": [
+    "uuid": "3b6e6ddc-8cc6-43ca-990c-7e322afbe329",
+    "lastMigration": 33,
+    "name": "Be mock",
+    "endpointPrefix": "",
+    "latency": 0,
+    "port": 3000,
+    "hostname": "",
+    "folders": [],
+    "routes": [
         {
-          "uuid": "6ee1da0e-98ad-425a-bfef-55dd0e1d97de",
-          "statusCode": 200,
-          "label": "List of orders",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            },
-            {
-              "key": "Access-Control-Allow-Methods",
-              "value": "GET, POST, PUT, DELETE, OPTIONS"
-            },
-            {
-              "key": "Access-Control-Allow-Headers",
-              "value": "Content-Type"
-            }
-          ],
-          "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Order Alpha\",\n    \"description\": \"First order from client A\",\n    \"date\": \"2025-08-01\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Order Beta\",\n    \"description\": \"Urgent order from client B\",\n    \"date\": \"2025-08-05\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Order Gamma\",\n    \"description\": \"Monthly supply for client C\",\n    \"date\": \"2025-08-09\"\n  },\n  {\n    \"id\": 4,\n    \"name\": \"Order Delta\",\n    \"description\": \"Replacement items for client D\",\n    \"date\": \"2025-08-10\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Order Epsilon\",\n    \"description\": \"Custom order for VIP client E\",\n    \"date\": \"2025-08-11\"\n  }\n]",
-          "latency": 600,
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "type": "http",
-      "responseMode": null,
-      "streamingMode": null,
-      "streamingInterval": 0
-    },
-    {
-      "uuid": "10112409-5c55-4a72-9d2b-716395d3a7fb",
-      "documentation": "Get single order with products",
-      "method": "get",
-      "endpoint": "api/orders/:id",
-      "responses": [
+            "uuid": "881f6e89-79f0-4eaa-95a3-79879de00057",
+            "documentation": "Get all orders",
+            "method": "get",
+            "endpoint": "api/orders",
+            "responses": [
+                {
+                    "uuid": "6ee1da0e-98ad-425a-bfef-55dd0e1d97de",
+                    "statusCode": 200,
+                    "label": "List of orders",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE, OPTIONS"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "Content-Type"
+                        }
+                    ],
+                    "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Repellendus ipsam distinctio.\",\n        \"description\": \"Est suscipit mollitia qui quibusdam voluptatum error sint. Quisquam neque eum voluptatem quo. Sit facilis commodi consequatur laudantium repellendus odio. Perspiciatis iste blanditiis error a voluptatem consequatur quas.\",\n        \"date\": \"07-04-2025\",\n        \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n        \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Quos debitis nisi ipsum.\",\n        \"description\": \"Tempore consequatur qui eos fuga pariatur nobis sint. Ullam voluptatem quis non provident. Explicabo repellendus tempora quam qui neque aliquid.\",\n        \"date\": \"01-08-2025\",\n        \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n        \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Eligendi fugiat quos et.\",\n        \"description\": \"Porro voluptas velit excepturi optio impedit quo reiciendis. Provident magnam reprehenderit in adipisci reprehenderit nulla. Eaque et blanditiis consequatur. Harum quia natus officia.\",\n        \"date\": \"16-11-2024\",\n        \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n        \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Facere dolor molestias.\",\n        \"description\": \"Quo sit quis soluta dolorem pariatur. Ipsa delectus cumque eius perspiciatis dolor. Aliquid debitis voluptatum laborum est dolorem quas ea. Numquam laboriosam quia asperiores quae quo qui repellendus. Deserunt possimus optio amet.\",\n        \"date\": \"03-02-2025\",\n        \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n        \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Tempora perferendis rem.\",\n        \"description\": \"Quo aliquam quibusdam veniam quaerat. Reprehenderit quibusdam quod tenetur labore officia labore. Est quam nostrum repudiandae id consequatur debitis est alias. Minima illum eaque et accusamus est. Et magnam consectetur mollitia ipsum consequatur mollitia eum.\",\n        \"date\": \"22-10-2024\",\n        \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n        \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Commodi animi consequatur.\",\n        \"description\": \"Dolorum amet laboriosam magni esse quo dignissimos id. Quas minima perferendis quia.\",\n        \"date\": \"16-02-2025\",\n        \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n        \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Dolorum tenetur neque.\",\n        \"description\": \"Earum et sunt saepe ipsam natus quas. Non qui ut exercitationem. Saepe sint deserunt minus odio id voluptatem est et. Placeat itaque ab veritatis incidunt est inventore sit. Exercitationem voluptates nam qui optio modi.\",\n        \"date\": \"27-06-2025\",\n        \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n        \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Est et at consequatur.\",\n        \"description\": \"Id excepturi quae qui ipsa possimus. Error expedita facere assumenda nemo. Est velit et iste doloribus enim at porro.\",\n        \"date\": \"04-11-2024\",\n        \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n        \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Fuga aperiam corrupti.\",\n        \"description\": \"Qui enim quis a consectetur. Qui aut eum in dolor dolore corporis qui. Libero non et eos dolores ut enim qui.\",\n        \"date\": \"15-10-2024\",\n        \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n        \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Provident ut odit consequatur omnis.\",\n        \"description\": \"Dolorem error et sed ut ut rerum. Ullam similique dignissimos culpa eaque necessitatibus. Nisi vitae cupiditate et beatae ullam. Sint debitis excepturi dolor eum laudantium.\",\n        \"date\": \"16-04-2025\",\n        \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n        \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n    }\n]",
+                    "latency": 600,
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "type": "http",
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
         {
-          "uuid": "e36cfddd-2f34-4715-a65c-08d09b7f9791",
-          "statusCode": 200,
-          "label": "Order with products",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            },
-            {
-              "key": "Access-Control-Allow-Methods",
-              "value": "GET, POST, PUT, DELETE, OPTIONS"
-            },
-            {
-              "key": "Access-Control-Allow-Headers",
-              "value": "Content-Type"
-            }
-          ],
-          "body": "{\n  \"id\": 1,\n  \"name\": \"Order Alpha\",\n  \"description\": \"First order from client A\",\n  \"date\": \"2025-08-01\",\n  \"products\": [\n    { \"id\": 101, \"name\": \"Product A1\", \"price\": 15.5 },\n    { \"id\": 102, \"name\": \"Product A2\", \"price\": 9.99 },\n    { \"id\": 103, \"name\": \"Product A3\", \"price\": 42.0 }\n  ]\n}\n",
-          "latency": 0,
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "type": "http",
-      "responseMode": null,
-      "streamingMode": null,
-      "streamingInterval": 0
-    },
-    {
-      "uuid": "926d3a73-8ea5-4c41-a728-5333468d658f",
-      "documentation": "Create a new order",
-      "method": "post",
-      "endpoint": "api/orders",
-      "responses": [
+            "uuid": "10112409-5c55-4a72-9d2b-716395d3a7fb",
+            "documentation": "Get single order with products",
+            "method": "get",
+            "endpoint": "api/orders/:id",
+            "responses": [
+                {
+                    "uuid": "e36cfddd-2f34-4715-a65c-08d09b7f9791",
+                    "statusCode": 200,
+                    "label": "Order with products",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE, OPTIONS"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "Content-Type"
+                        }
+                    ],
+                    "body": "{\n    \"id\": 1,\n    \"name\": \"Repellendus ipsam distinctio.\",\n    \"description\": \"Est suscipit mollitia qui quibusdam voluptatum error sint. Quisquam neque eum voluptatem quo. Sit facilis commodi consequatur laudantium repellendus odio. Perspiciatis iste blanditiis error a voluptatem consequatur quas.\",\n    \"date\": \"2025-04-07\",\n    \"products\": [\n        {\n            \"id\": 4,\n            \"name\": \"aut Lamp\",\n            \"price\": 442.23\n        },\n        {\n            \"id\": 15,\n            \"name\": \"et IPhone\",\n            \"price\": 242.4\n        },\n        {\n            \"id\": 17,\n            \"name\": \"non Table\",\n            \"price\": 167.19\n        },\n        {\n            \"id\": 18,\n            \"name\": \"laborum Table\",\n            \"price\": 199.47\n        }\n    ]\n}",
+                    "latency": 0,
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "type": "http",
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
         {
-          "uuid": "e985b80f-5716-4154-a725-643a490fcb7b",
-          "statusCode": 201,
-          "label": "Order created",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            }
-          ],
-          "body": "{}",
-          "latency": 0,
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "type": "http",
-      "responseMode": null,
-      "streamingMode": null,
-      "streamingInterval": 0
-    },
-    {
-      "uuid": "7aeb7c93-a48c-44d6-a33c-aab172529ded",
-      "documentation": "Update an order",
-      "method": "put",
-      "endpoint": "api/update-order/:id",
-      "responses": [
+            "uuid": "7aeb7c93-a48c-44d6-a33c-aab172529ded",
+            "documentation": "Update an order",
+            "method": "put",
+            "endpoint": "api/orders/:id",
+            "responses": [
+                {
+                    "uuid": "cdeb0c76-7664-4565-a48b-c1084ab3d770",
+                    "statusCode": 200,
+                    "label": "Order updated",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "Content-Type"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE, OPTIONS"
+                        }
+                    ],
+                    "body": "{\n  \"name\": \"Updated Order Name\",\n  \"description\": \"Updated description\",\n  \"date\": \"2025-08-08\",\n  \"products\": [\n    { \"id\": 1, \"quantity\": 3 },\n    { \"id\": 2, \"quantity\": 1 },\n    { \"id\": 5, \"quantity\": 2 }\n  ]\n}",
+                    "latency": 0,
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "type": "http",
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
         {
-          "uuid": "cdeb0c76-7664-4565-a48b-c1084ab3d770",
-          "statusCode": 200,
-          "label": "Order updated",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "Access-Control-Allow-Headers",
-              "value": "Content-Type"
-            },
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            },
-            {
-              "key": "Access-Control-Allow-Methods",
-              "value": "GET, POST, PUT, DELETE, OPTIONS"
-            }
-          ],
-          "body": "{ \"message\": \"Order updated successfully\"}",
-          "latency": 0,
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "type": "http",
-      "responseMode": null,
-      "streamingMode": null,
-      "streamingInterval": 0
-    },
-    {
-      "uuid": "a3f4cb96-4ed9-4f75-b7c5-b82b774f807f",
-      "documentation": "delete order",
-      "method": "post",
-      "endpoint": "api/orders/:id",
-      "responses": [
+            "uuid": "a3f4cb96-4ed9-4f75-b7c5-b82b774f807f",
+            "documentation": "delete order",
+            "method": "delete",
+            "endpoint": "api/orders/:id",
+            "responses": [
+                {
+                    "uuid": "d7df4f08-2f2f-41fc-b264-3c4384370afe",
+                    "statusCode": 200,
+                    "label": "delete order",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE, OPTIONS"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "Content-Type"
+                        }
+                    ],
+                    "body": "{\n  \"message\": \"Order Deleted successfully\"\n}",
+                    "latency": 600,
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "type": "http",
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
         {
-          "uuid": "d7df4f08-2f2f-41fc-b264-3c4384370afe",
-          "statusCode": 200,
-          "label": "delete order",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            },
-            {
-              "key": "Access-Control-Allow-Methods",
-              "value": "GET, POST, PUT, DELETE, OPTIONS"
-            },
-            {
-              "key": "Access-Control-Allow-Headers",
-              "value": "Content-Type"
-            }
-          ],
-          "body": "{\n  \"message\": \"Order Deleted successfully\"\n}",
-          "latency": 600,
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
+            "uuid": "68448b03-6bfd-4916-9bab-b995f8378910",
+            "type": "http",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/products",
+            "responses": [
+                {
+                    "uuid": "1e315d95-f765-4fb1-9228-ca1cd6dbffe0",
+                    "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"explicabo Chair\",\n    \"price\": \"288.90\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"commodi Desk\",\n    \"price\": \"272.27\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"et Table\",\n    \"price\": \"171.55\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 4,\n    \"name\": \"aut Lamp\",\n    \"price\": \"442.23\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"quis Desk\",\n    \"price\": \"261.22\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 6,\n    \"name\": \"quasi Chair\",\n    \"price\": \"239.44\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 7,\n    \"name\": \"officiis Guitar\",\n    \"price\": \"241.48\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 8,\n    \"name\": \"voluptates Table\",\n    \"price\": \"332.98\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 9,\n    \"name\": \"cum Guitar\",\n    \"price\": \"120.04\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 10,\n    \"name\": \"maiores Guitar\",\n    \"price\": \"165.85\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 11,\n    \"name\": \"odit IPhone\",\n    \"price\": \"226.24\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 12,\n    \"name\": \"nisi Lamp\",\n    \"price\": \"170.53\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 13,\n    \"name\": \"temporibus MacBook\",\n    \"price\": \"212.29\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 14,\n    \"name\": \"necessitatibus Guitar\",\n    \"price\": \"367.38\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 15,\n    \"name\": \"et IPhone\",\n    \"price\": \"242.40\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 16,\n    \"name\": \"voluptatem Lamp\",\n    \"price\": \"155.28\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 17,\n    \"name\": \"non Table\",\n    \"price\": \"167.19\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 18,\n    \"name\": \"laborum Table\",\n    \"price\": \"199.47\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 19,\n    \"name\": \"ut Table\",\n    \"price\": \"389.47\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  },\n  {\n    \"id\": 20,\n    \"name\": \"ut Guitar\",\n    \"price\": \"17.77\",\n    \"created_at\": \"2025-08-11T20:14:01.000000Z\",\n    \"updated_at\": \"2025-08-11T20:14:01.000000Z\"\n  }\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "Content-Type"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE, OPTIONS"
+                        }
+                    ],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
         }
-      ],
-      "type": "http",
-      "responseMode": null,
-      "streamingMode": null,
-      "streamingInterval": 0
-    }
-  ],
-  "rootChildren": [
-    {
-      "type": "route",
-      "uuid": "881f6e89-79f0-4eaa-95a3-79879de00057"
+    ],
+    "rootChildren": [
+        {
+            "type": "route",
+            "uuid": "881f6e89-79f0-4eaa-95a3-79879de00057"
+        },
+        {
+            "type": "route",
+            "uuid": "10112409-5c55-4a72-9d2b-716395d3a7fb"
+        },
+        {
+            "type": "route",
+            "uuid": "7aeb7c93-a48c-44d6-a33c-aab172529ded"
+        },
+        {
+            "type": "route",
+            "uuid": "a3f4cb96-4ed9-4f75-b7c5-b82b774f807f"
+        },
+        {
+            "type": "route",
+            "uuid": "68448b03-6bfd-4916-9bab-b995f8378910"
+        }
+    ],
+    "proxyMode": false,
+    "proxyHost": "",
+    "proxyRemovePrefix": false,
+    "tlsOptions": {
+        "enabled": false,
+        "type": "CERT",
+        "pfxPath": "",
+        "certPath": "",
+        "keyPath": "",
+        "caPath": "",
+        "passphrase": ""
     },
-    {
-      "type": "route",
-      "uuid": "10112409-5c55-4a72-9d2b-716395d3a7fb"
-    },
-    {
-      "type": "route",
-      "uuid": "926d3a73-8ea5-4c41-a728-5333468d658f"
-    },
-    {
-      "type": "route",
-      "uuid": "7aeb7c93-a48c-44d6-a33c-aab172529ded"
-    },
-    {
-      "type": "route",
-      "uuid": "a3f4cb96-4ed9-4f75-b7c5-b82b774f807f"
-    }
-  ],
-  "proxyMode": false,
-  "proxyHost": "",
-  "proxyRemovePrefix": false,
-  "tlsOptions": {
-    "enabled": false,
-    "type": "CERT",
-    "pfxPath": "",
-    "certPath": "",
-    "keyPath": "",
-    "caPath": "",
-    "passphrase": ""
-  },
-  "cors": true,
-  "headers": [],
-  "proxyReqHeaders": [],
-  "proxyResHeaders": [],
-  "data": [],
-  "callbacks": []
+    "cors": true,
+    "headers": [],
+    "proxyReqHeaders": [],
+    "proxyResHeaders": [],
+    "data": [],
+    "callbacks": []
 }

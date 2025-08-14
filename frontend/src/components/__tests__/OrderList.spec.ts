@@ -93,7 +93,7 @@ describe("Orders Store", () => {
 
     expect(fetchSpy).toHaveBeenCalledWith("http://localhost:8000/api/orders");
 
-    fetchSpy.mockRestore(); // clean up
+    fetchSpy.mockRestore();
   });
 
   it("should call DELETE order endpoint", async () => {
